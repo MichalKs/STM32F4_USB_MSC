@@ -71,6 +71,7 @@
 									<listOptionValue builtIn="false" value="../libs/STM32_USB_Device_Library/Class/msc/inc"/>
 									<listOptionValue builtIn="false" value="../libs/STM32_USB_HOST_Library/Class/HID/inc"/>
 									<listOptionValue builtIn="false" value="../libs/STM32_USB_HOST_Library/Class/MSC/inc"/>
+									<listOptionValue builtIn="false" value="../fatfs"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.std.1255159135" name="Language standard" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.std" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.std.gnu11" valueType="enumerated"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.2038437613" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -138,6 +139,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry excluding="option" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="fatfs"/>
 						<entry excluding="STM32_USB_Device_Library/Class/msc/src/usbd_storage_template.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="libs"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
