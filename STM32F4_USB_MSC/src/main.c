@@ -46,7 +46,7 @@ int main(void) {
 	UART2_Init(); // Initialize USART2 (for printf)
 	TIMER_Init(SYSTICK_FREQ); // Initialize timer
 
-	int8_t timerID = TIMER_AddSoftTimer(1000,softTimerCallback);
+	int8_t timerID = TIMER_AddSoftTimer(1000, softTimerCallback);
 	TIMER_StartSoftTimer(timerID);
 
 	LED_TypeDef led;

@@ -28,6 +28,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_msc_mem.h"
 #include "usb_conf.h"
+#include "sdcard.h"
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
   * @{
@@ -153,10 +154,7 @@ __IO uint32_t count = 0;
 int8_t STORAGE_Init (uint8_t lun)
 {
 
-//  if( SD_Init() != 0)
-//  {
-//    return (-1);
-//  }
+//  SD_Init();
 
   return (0);
   
@@ -184,10 +182,10 @@ int8_t STORAGE_GetCapacity (uint8_t lun, uint32_t *block_num, uint32_t *block_si
 //#endif
 //
 //
-//  *block_size =  512;
-//  *block_num =  SDCardInfo.CardCapacity / 512;
-//
-//  return (0);
+  *block_size =  512;
+  *block_num =  2097152 / 512;
+
+  return (0);
   
 }
 
@@ -199,28 +197,8 @@ int8_t STORAGE_GetCapacity (uint8_t lun, uint32_t *block_num, uint32_t *block_si
 int8_t  STORAGE_IsReady (uint8_t lun)
 {
   
-//#ifndef USE_STM3210C_EVAL
-//
-//  static int8_t last_status = 0;
-//
-//  if(last_status  < 0)
-//  {
-//    SD_Init();
-//    last_status = 0;
-//  }
-//
-//  if(SD_GetStatus() != 0)
-//  {
-//    last_status = -1;
-//    return (-1);
-//  }
-//#else
-//  if( SD_Init() != 0)
-//  {
-//    return (-1);
-//  }
-//#endif
-//  return (0);
+
+  return (0);
 }
 
 /**
@@ -247,17 +225,9 @@ int8_t STORAGE_Read (uint8_t lun,
                  uint16_t blk_len)
 {
   
-//  if( SD_ReadMultiBlocks (buf,
-//                          blk_addr * 512,
-//                          512,
-//                          blk_len) != 0)
-//  {
-//    return -1;
-//  }
-//#ifndef USE_STM3210C_EVAL
-//  SD_WaitReadOperation();
-//  while (SD_GetStatus() != SD_TRANSFER_OK);
-//#endif
+  SD_ReadSectors (buf, blk_addr, blk_len);
+
+
   return 0;
 }
 /**
@@ -273,18 +243,9 @@ int8_t STORAGE_Write (uint8_t lun,
                   uint32_t blk_addr,
                   uint16_t blk_len)
 {
-//
-//  if( SD_WriteMultiBlocks (buf,
-//                           blk_addr * 512,
-//                           512,
-//                           blk_len) != 0)
-//  {
-//    return -1;
-//  }
-//#ifndef USE_STM3210C_EVAL
-//  SD_WaitWriteOperation();
-//  while (SD_GetStatus() != SD_TRANSFER_OK);
-//#endif
+
+  SD_WriteSectors (buf, blk_addr, blk_len);
+
   return (0);
 }
 
