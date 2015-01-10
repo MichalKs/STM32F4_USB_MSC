@@ -5,18 +5,19 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.2105068587" moduleId="org.eclipse.cdt.core.settings" name="Release">
 				<externalSettings/>
 				<extensions>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.2105068587" name="Release" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.2105068587" name="Release" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release">
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.2105068587." name="/" resourcePath="">
 						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release.1398503598" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release">
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1733970329" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.size" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1733970329" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.more" valueType="enumerated"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.1274560871" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.1955664005" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1421315378" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" value="true" valueType="boolean"/>
@@ -40,45 +41,63 @@
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.2113707194" name="Create flash image" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.917073767" name="Print size" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" value="true" valueType="boolean"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.1384676384" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
-							<builder buildPath="${workspace_loc:/STM32F4_USB_MSC}/Release" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1869570846" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
+							<builder buildPath="${workspace_loc:/STM32F4_USB_MSC}/Release" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1869570846" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
+								</outputEntries>
+							</builder>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.668962048" name="Cross ARM GNU Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.2060687403" name="Use preprocessor" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1075031335" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../libs/CMSIS/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../libs/StdPeriph/include&quot;"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/include"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/CMSIS/include"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/StdPeriph/include"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_OTG_Driver/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_HOST_Library/Core/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Core/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/audio/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/cdc/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/dfu/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/hid/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/msc/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_HOST_Library/Class/HID/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_HOST_Library/Class/MSC/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/fatfs"/>
+									<listOptionValue builtIn="false" value="../app/inc"/>
+									<listOptionValue builtIn="false" value="../hal/inc"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1305193382" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="STM32F40_41xxx"/>
 									<listOptionValue builtIn="false" value="USE_STDPERIPH_DRIVER"/>
 									<listOptionValue builtIn="false" value="HSE_VALUE=8000000"/>
-									<listOptionValue builtIn="false" value="DEBUG"/>
+									<listOptionValue builtIn="false" value="USE_USB_OTG_FS"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.52971726" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.706910258" name="Cross ARM C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.990111496" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../libs/CMSIS/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../libs/StdPeriph/include&quot;"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_OTG_Driver/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_HOST_Library/Core/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_Device_Library/Core/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_Device_Library/Class/audio/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_Device_Library/Class/cdc/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_Device_Library/Class/dfu/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_Device_Library/Class/hid/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_Device_Library/Class/msc/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_HOST_Library/Class/HID/inc"/>
-									<listOptionValue builtIn="false" value="../libs/STM32_USB_HOST_Library/Class/MSC/inc"/>
-									<listOptionValue builtIn="false" value="../fatfs"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/include"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/CMSIS/include"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/StdPeriph/include"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_OTG_Driver/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_HOST_Library/Core/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Core/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/audio/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/cdc/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/dfu/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/hid/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_Device_Library/Class/msc/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_HOST_Library/Class/HID/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/libs/STM32_USB_HOST_Library/Class/MSC/inc"/>
+									<listOptionValue builtIn="false" value="/home/mik/git/STM32F4_USB_MSC/STM32F4_USB_MSC/fatfs"/>
+									<listOptionValue builtIn="false" value="../app/inc"/>
+									<listOptionValue builtIn="false" value="../hal/inc"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.std.1255159135" name="Language standard" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.std" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.std.gnu11" valueType="enumerated"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.2038437613" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="STM32F40_41xxx"/>
 									<listOptionValue builtIn="false" value="USE_STDPERIPH_DRIVER"/>
 									<listOptionValue builtIn="false" value="HSE_VALUE=8000000"/>
-									<listOptionValue builtIn="false" value="DEBUG"/>
 									<listOptionValue builtIn="false" value="USE_USB_OTG_FS"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.655675515" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
@@ -104,7 +123,7 @@
 									<listOptionValue builtIn="false" value="sections.ld"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths.242394369" name="Library search path (-L)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;../ldscripts&quot;"/>
+									<listOptionValue builtIn="false" value="../ldscripts"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostart.1468840912" name="Do not use standard start files (-nostartfiles)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostart" value="true" valueType="boolean"/>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.1613207898" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
@@ -139,9 +158,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="app"/>
 						<entry excluding="option" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="fatfs"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="hal"/>
 						<entry excluding="STM32_USB_Device_Library/Class/msc/src/usbd_storage_template.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="libs"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -158,5 +178,10 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/STM32F4_USB_MSC"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
