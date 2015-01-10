@@ -81,8 +81,8 @@ int main(void) {
 
   // test another way of measuring time delays
   uint32_t softTimer = TIMER_GetTime(); // get start time for delay
-
-  FAT_Init(SD_Init, SD_ReadSectors, SD_WriteSectors);
+  SD_Init();
+//  FAT_Init(SD_Init, SD_ReadSectors, SD_WriteSectors);
 
   // Initialize USB device stack
   USBD_Init(&USB_OTG_dev,

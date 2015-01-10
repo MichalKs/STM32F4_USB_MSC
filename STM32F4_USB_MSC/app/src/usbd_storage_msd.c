@@ -131,8 +131,6 @@ USBD_STORAGE_cb_TypeDef USBD_MICRO_SDIO_fops = {
 
 USBD_STORAGE_cb_TypeDef  *USBD_STORAGE_fops = &USBD_MICRO_SDIO_fops;
 
-
-__IO uint32_t count = 0;
 /**
   * @}
   */ 
