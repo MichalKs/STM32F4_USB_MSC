@@ -151,7 +151,7 @@ __IO uint32_t count = 0;
 
 int8_t STORAGE_Init (uint8_t lun) {
 
-  SD_Init();
+//  SD_Init();
 
   return (0);
   
@@ -221,7 +221,7 @@ int8_t STORAGE_Write (uint8_t lun,
                   uint32_t blk_addr,
                   uint16_t blk_len) {
 
-  SD_WriteSectors (buf, blk_addr, blk_len);
+//  SD_WriteSectors (buf, blk_addr, blk_len);
 
   return (0);
 }
